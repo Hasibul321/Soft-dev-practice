@@ -14,7 +14,7 @@ dish.route('/')
     })
     .delete((req,res)=>{
         res.send("dish router delete")
-    })
+    }) 
 dish.route('/:id')
     .get((req,res)=>{
         res.status(200).send(`The req id is: ${req.params.id}`)

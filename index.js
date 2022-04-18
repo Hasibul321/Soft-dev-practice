@@ -6,11 +6,11 @@ const leaderRouter = require("./routes/leaderRouter");
 const promo = require("./routes/promoRouter");
 const promoRouter = require("./routes/promoRouter");
 
-mongoose.connect("mongodb://localhost:27017/leader").then(()=>{
-    console.log( "db connected");
-}).catch((err)=>{
-    console.log(err);
-});
+ mongoose.connect("mongodb://localhost:27017/leader").then(()=>{
+     console.log( "db connected");
+ }).catch((err)=>{
+     console.log(err);
+ });
 
 const app = express();
 app.use(express.json());
@@ -27,3 +27,6 @@ app.all('/',(req,res)=>{
 app.listen(4000,()=>{
     console.log("Listening to port 4000 ...");
 })
+
+
+
